@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.241.128:8848,192.168.241.129:8848,192.168.241.130:8848
+        service: order
+        namespace: f79ea148-b98b-4e6c-a796-9247aa1a249e
+        group: group1
+        cluster-name: BJ
