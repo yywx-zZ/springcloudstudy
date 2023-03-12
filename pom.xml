@@ -55,6 +55,7 @@
     <modules>
         <module>order</module>
         <module>user</module>
+        <module>nacos</module>
     </modules>
     <dependencyManagement>
         <dependencies>
