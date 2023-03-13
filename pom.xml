@@ -53,9 +53,7 @@
         </dependency>
     </dependencies>
     <modules>
-        <module>order</module>
-        <module>user</module>
-        <module>nacos</module>
+        <module>spring-cloud-alibaba-nacos-demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>
