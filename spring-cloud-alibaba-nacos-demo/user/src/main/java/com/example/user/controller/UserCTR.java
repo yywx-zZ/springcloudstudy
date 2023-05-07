@@ -1,6 +1,7 @@
 package com.example.user.controller;
 
 import com.alibaba.nacos.shaded.org.checkerframework.checker.units.qual.A;
+import com.example.user.openfeign.OrderOpenFeign;
 import com.example.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -61,5 +62,12 @@ public class UserCTR {
     @GetMapping("/get_order/lb/v2")
     public String getOrderBylbV2(@RequestParam String serviceId) {
         return restTemplate.getForObject("http://" +serviceId + "/get_order", String.class);
+    }
+
+    @Autowired
+    OrderOpenFeign orderOpenFeign;
+    @GetMapping("/get_order/feign")
+    public String getOrderByFeign() {
+        return orderOpenFeign.getOrder();
     }
 }
